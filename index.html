@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pet Carrying Drone - Newsletter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <h1>Pet Carrying Drone</h1>
+    <p>Experience the convenience and joy of having your pets carried by a drone. Sign up for our newsletter to stay up-to-date on the latest news, memes, and cute pictures of pet carrying drones!</p>
+    
+    <form onsubmit="return subscribe()">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required pattern="^[a-zA-Z]{2,}$">
+      <br>
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required pattern="^[a-zA-Z]{2,}$">
+      <br>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+
+      <input type="submit" value="Subscribe">
+    </form>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Thank you for subscribing to our newsletter. Enjoy the drones!</p>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("modal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
